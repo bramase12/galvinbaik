@@ -7,7 +7,7 @@ header {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
     padding: 2rem;
-    background-image:url(assets/cyberpunk-urban-scenery.jpg);
+    background-image:url(cyberpunk-urban-scenery.jpg);
     background-size: cover;
     color: #f4f4f4;
     letter-spacing: 5px;
@@ -21,12 +21,12 @@ body {
 
 }
 nav {
-    background-color:#0f0ff9;
+    background-color:#254aee;
     display: flex;
     justify-content: space-between;
     align-items: center;
-background-color: #200dc6;
-padding: 10px; 
+    background-color: #6f11c7;
+    padding: 10px; 
 
 }
 nav ul {
@@ -71,8 +71,19 @@ footer p a {
     text-decoration: none;
     color: white;
 }
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
 .navbar-brand {
     margin-right: auto;
     color: white; 
-    font-size: 24px; 
+    font-size: 20px; 
 }
