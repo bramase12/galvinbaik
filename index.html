@@ -28,11 +28,12 @@
 
         }
         nav {
-            background-color: #9B0000;
+            background-color:#254aee;
             display: flex;
-            justify-content: right;
-            padding: 1rem ;
-            position: relative;
+            justify-content: space-between;
+            align-items: center;
+    background-color: #2987df;
+    padding: 10px; 
 
         }
         nav ul {
@@ -40,9 +41,10 @@
             list-style: none;
             align-items: center;
             gap: 2rem;
-            
+         }
+        .nav li {
+            margin-left: 20px;  
         }
-
         nav ul li a {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: white;
@@ -76,6 +78,12 @@
             text-decoration: none;
             color: white;
         }
+        .navbar-brand {
+            margin-right: auto;
+            color: white; 
+            font-size: 24px; 
+        }
+
     </style>
 </head>
 <header>
@@ -83,11 +91,16 @@
     <p>Menyediakan berbagai jenis akun</p>
 </header>
 <body>
-    <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
-    <nav>
+    <nav class="navbar navbar-expand-lg navbar-blue bg-blue">
+        <div class="container" >
+            <a class="navbar-brand" href="#" style="color: white; text-decoration: none;">
+            <img src="../galvinbaik/logo brand.jpg" alt="Logo" width="30" height="24">
+            <strong>FUFUFAFA STORE</strong>
+        </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+          </div>
         <ul>
             <li><a href="index.html">Beranda</a></li>
             <li><a href="produk.html">Produk</a></li>
