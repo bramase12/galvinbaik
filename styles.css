@@ -24,7 +24,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #6f11c7;
+    background-color: #9a35ff;
     padding: 10px; 
 
 }
@@ -34,21 +34,10 @@ nav ul {
     align-items: center;
     gap: 2rem;
  }
-.nav li {
+nav li {
     margin-left: 20px;  
 }
-nav ul li a {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: white;
-    text-decoration: none;
-    
-}
 
-nav ul li a:hover {
-    background-color: #f4f4f4;
-    padding: 1rem;
-    color: black;
-}
 #background {
     width: 1000px;
     height:auto;
@@ -85,4 +74,11 @@ footer p a {
     margin-right: auto;
     color: white; 
     font-size: 20px; 
+}
+.text-white {
+    color: white;
+}
+
+.text-white:hover {
+    color: black;
 }

@@ -1,3 +1,4 @@
+<?php include 'login/for_login_page.php'; ?>
 <!DOCTYPE html>
 <html lang="id">
 <head>

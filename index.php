@@ -1,3 +1,4 @@
+<?php include 'login/main.php';?>
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -77,40 +78,19 @@
     </style>
 </head>
 <body>
-    <div id="login-box">
+    <div id="login-box" method="post" action="">
         <h2>LOGIN</h2>
-        <form id="login-form">
+        <form id="login-form" method="POST" action="">
             <label for="username">Username</label>
-            <input type="text" id="username" name="username" required>
+            <?php if (isset($error)) { echo "<p style='color:red;'>$error</p>"; }?>
+            <input type="text" id="username" name="username" required placeholder="Username">
 
             <label for="password">Password</label>
-            <input type="password" id="password" name="password" required>
-
-            <button type="submit">Login</button>
+            <input type="password" id="password" name="password" required placeholder="Password">
+            
+            <button type="submit" name="login">Login</button>
             <p>Sponsored by PPLG</p>
         </form>
     </div>
 </body>
-<script>
-    document.getElementById('login-form').addEventListener('submit', function(event) {
-        event.preventDefault();
-
-        const userInput = document.getElementById('username').value;
-        const passwordInput = document.getElementById('password').value;
-        const validUser   = "adminjahat";
-        const validPassword = "adminsudahdatang";
-
-        if (!userInput || !passwordInput) {
-            alert("Silakan masukkan username dan password!");
-            return;
-        }
-        if (userInput !== validUser  ) {
-            alert("Akun tidak ada!");
-        } else if (passwordInput !== validPassword) {
-            alert("Password tidak valid!");
-        } else {
-            window.location.href = 'Beranda.php';
-        }
-    });
-</script>
 </html>
