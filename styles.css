@@ -21,7 +21,6 @@ body {
 
 }
 nav {
-    background-color:#254aee;
     display: flex;
     justify-content: space-between;
     align-items: center;
