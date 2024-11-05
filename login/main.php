@@ -1,23 +1,12 @@
 <?php
-session_start();
-$host = 'localhost';
-$db = 'fufastore';
-$user = 'root'; 
-$pass = ''; 
-
-$conn = new mysqli($host, $user, $pass, $db); // Tambahkan $db di sini
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
+require '../server/loginserver.php'
 // Proses login
 if (isset($_POST['login'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
     // Cek kredensial pengguna
-    $stmt = $conn->prepare("SELECT * FROM fufastore.users WHERE username = ?"); // Tambahkan nama database
+    $stmt = $conn->prepare("SELECT * FROM fufastore.users WHERE username = ?");
     $stmt->bind_param("s", $username);
     $stmt->execute();
     $result = $stmt->get_result();
@@ -27,7 +16,14 @@ if (isset($_POST['login'])) {
         if (password_verify($password, $user['password'])) {
             $_SESSION['loggedin'] = true;
             $_SESSION['username'] = $username;
-            header('Location: beranda.php');
+            $_SESSION['role'] = $user['role'];
+
+            // Redirect berdasarkan role
+            if ($user['role'] === 'admin') {
+                header('Location: /galvinbaik/adminpage/beranda.php');
+            } else {
+                header('Location: /galvinbaik/beranda.php');
+            }
             exit;
         } else {
             $error = "Password salah.";
