@@ -1,6 +1,5 @@
 <?php
-require '../server/loginserver.php'; // Fix: Added semicolon
-
+require __DIR__ . '/../server/loginserver.php';
 // Proses login
 if (isset($_POST['login'])) {
     $username = $_POST['username'];
