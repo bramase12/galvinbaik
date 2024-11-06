@@ -2,7 +2,7 @@
 $host = 'localhost';
 $db = 'fufastore';
 $user = 'root'; 
-$pass = 'gregoganteng'; 
+$pass = ''; 
 
 $conn = new mysqli($host, $user, $pass, $db);
 
