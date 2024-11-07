@@ -13,7 +13,7 @@
 </header>
 <body>
     <?php  include_once 'navbar/navbar.html'; ?>
-    <?php  include_once 'inwebsite/identitas.html'; ?>
+    <?php  include_once 'inwebsite/identitas.php'; ?>
 </body>
 <footer>
     <?php  include_once 'navbar/footer.html'; ?>
