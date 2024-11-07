@@ -15,6 +15,7 @@ include '../login/for_login_page.php';
 </header>
 <body>
     <?php include 'navbar.html'; ?>
+    <?php include '../inwebsite/identitas.html'; ?>
 </body>
 <footer>
     <?php include 'footer.html'; ?>
