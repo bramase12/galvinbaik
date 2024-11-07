@@ -5,7 +5,7 @@
       <div class="card-body">
           <h5 class="card-title"><?php echo $dataadmin[0]["nama"]?></h5>
           <p class="card-text"><?php echo $dataadmin[0]["role"]?></p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <a href="#" class="btn btn-primary">Hubungi</a>
       </div>
   </div>
   <div class="card" style="width: 18rem; padding: 1rem;">
@@ -13,7 +13,7 @@
       <div class="card-body">
           <h5 class="card-title"><?php echo $dataadmin[1]["nama"]?></h5>
           <p class="card-text"><?php echo $dataadmin[1]["role"]?></p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <a href="https://www.instagram.com/brmstasyr/" class="btn btn-primary">Hubungi</a>
       </div>
   </div>
   <div class="card" style="width: 18rem; padding: 1rem;">
@@ -21,7 +21,7 @@
       <div class="card-body">
           <h5 class="card-title"><?php echo $dataadmin[2]["nama"]?></h5>
           <p class="card-text"><?php echo $dataadmin[2]["role"]?></p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <a href="#" class="btn btn-primary">Hubungi</a>
       </div>
   </div>
   <div class="card" style="width: 18rem; padding: 1rem;">
@@ -29,7 +29,7 @@
       <div class="card-body">
           <h5 class="card-title"><?php echo $dataadmin[3]["nama"]?></h5>
           <p class="card-text"><?php echo $dataadmin[3]["role"]?>r</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <a href="#" class="btn btn-primary">Hubungi</a>
       </div>
   </div>
   <div class="card" style="width: 18rem; padding: 1rem;">
@@ -37,7 +37,7 @@
       <div class="card-body">
           <h5 class="card-title"><?php echo $dataadmin[4]["nama"]?></h5>
           <p class="card-text"><?php echo $dataadmin[4]["role"]?></p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <a href="#" class="btn btn-primary">Hubungi</a>
       </div>
   </div>
 </div>
