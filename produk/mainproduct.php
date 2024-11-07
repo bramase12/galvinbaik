@@ -77,12 +77,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['delete_id'])) {
             top: 0.5rem;
             right: 0.5rem;
         }
+        .mb-4 {
+            display: flex;
+            justify-content: center; /* Mengatur posisi horizontal */ 
+            padding  : 1rem;
+
+        }
+
     </style>
 </head>
 <body class="bg-light">
-    <div class="container product-container">
-        <h2 class="mb-4">Daftar Produk</h2>
-        
+    <h2 class="mb-4">Daftar Produk</h2>
+    <div class="container product-container">        
         <?php
         if (isset($_GET['delete'])) {
             if ($_GET['delete'] == 'success') {

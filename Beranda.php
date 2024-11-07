@@ -13,6 +13,9 @@
 </header>
 <body>
     <?php  include_once 'navbar/navbar.html'; ?>
+    <main>
+        <?php  include_once 'inwebsite/iniberanda.html'; ?>
+    </main>
 </body>
 <footer>
     <?php  include_once 'navbar/footer.html'; ?>
