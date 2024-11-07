@@ -17,31 +17,36 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $harga = $_POST['harga'];
     
     // Handle file upload
-    $target_dir = "uploads/";
+    $target_dir = "../uploads/"; // Ubah ke direktori satu level di atas
     if (!file_exists($target_dir)) {
         mkdir($target_dir, 0777, true);
     }
     
-    $target_file = $target_dir . basename($_FILES["image"]["name"]);
-    $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+    $imageFileType = strtolower(pathinfo($_FILES["image"]["name"], PATHINFO_EXTENSION));
     
     // Generate unique filename
     $unique_filename = uniqid() . '.' . $imageFileType;
     $target_file = $target_dir . $unique_filename;
     
     if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
-        $image_url = $target_file;
+        $image_url = "uploads/" . $unique_filename; // Simpan path relatif
         
         // Insert into database
         $sql = "INSERT INTO products (nama_produk, harga, image_url) VALUES (?, ?, ?)";
         $stmt = $conn->prepare($sql);
+
+        if ($stmt === false) {
+            die("Error preparing statement: " . $conn->error);
+        }
+
         $stmt->bind_param("sds", $nama_produk, $harga, $image_url);
         
         if ($stmt->execute()) {
+            $stmt->close();
             header("Location: mainproduct.php");
             exit();
         } else {
-            echo "Error: " . $stmt->error;
+            echo "Error executing statement: " . $stmt->error;
         }
         $stmt->close();
     } else {
@@ -69,9 +74,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     </style>
 </head>
-<header>
-    <?php include '../navbar/header.html'; ?>
-</header>
 <body class="bg-light">
     <?php include 'navbar.html'; ?>
     <div class="container">
@@ -95,13 +97,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 
                 <div class="mb-3">
                     <button type="submit" class="btn btn-primary">Tambah Produk</button>
-                    <a href="mainproduct.php" class="btn btn-secondary">Kembali</a>
+                    <a href="produk.php" class="btn btn-secondary">Kembali</a>
                 </div>
             </form>
         </div>
     </div>
 </body>
-<footer>
-    <?php include 'footer.html'; ?> 
-</footer>
 </html>
