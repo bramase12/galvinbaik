@@ -14,7 +14,7 @@ include '../login/for_login_page.php';
     <?php include '../navbar/header.html'; ?>
 </header>
 <body>
-    <?php include 'navbar.html'; ?>
+    <?php include 'navbar.html';include '../inwebsite/tabelpembelian.php' ?>
 </body>
 <footer>
     <?php include 'footer.html'; ?>

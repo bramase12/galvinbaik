@@ -17,7 +17,7 @@
       </div>
   </div>
   <div class="card" style="width: 18rem; padding: 1rem;">
-      <img src="#" class="card-img-top" alt="#">
+      <img src="assets/GregoPP.jpeg" class="card-img-top" alt="#">
       <div class="card-body">
           <h5 class="card-title"><?php echo $dataadmin[2]["nama"]?></h5>
           <p class="card-text"><?php echo $dataadmin[2]["role"]?></p>
@@ -33,7 +33,7 @@
       </div>
   </div>
   <div class="card" style="width: 18rem; padding: 1rem;">
-      <img src="#" class="card-img-top" alt="#">
+      <img src="assets/GalvinPP.jpeg" class="card-img-top" alt="#">
       <div class="card-body">
           <h5 class="card-title"><?php echo $dataadmin[4]["nama"]?></h5>
           <p class="card-text"><?php echo $dataadmin[4]["role"]?></p>

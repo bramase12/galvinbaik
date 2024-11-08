@@ -12,7 +12,7 @@
     <?php  include_once 'navbar/header.html'; ?>
 </header>
 <body>
-    <?php  include_once 'navbar/navbar.html'; ?>
+    <?php  include_once 'navbar/navbar.html';include_once 'inwebsite/tabelpembelian.php';  ?>
 </body>
 <footer>
     <?php  include_once 'navbar/footer.html'; ?>
