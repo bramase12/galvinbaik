@@ -53,7 +53,6 @@ footer {
     position: fixed; /* Menambahkan properti ini */
     bottom: 0; /* Menentukan posisi tetap di atas */
     width: 100%; /* Mengatur lebar header agar penuh */
-    z-index: 1000;
     padding: 10px; 
     justify-content: center;
 }
