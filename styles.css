@@ -45,11 +45,17 @@ nav li {
     
 }
 footer {
-    flex-shrink: 0;
+    text-align: center;
     background-color: #3a37f7;
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: bold;
+    position: fixed; /* Menambahkan properti ini */
+    bottom: 0; /* Menentukan posisi tetap di atas */
+    width: 100%; /* Mengatur lebar header agar penuh */
+    z-index: 1000;
+    padding: 10px; 
+    justify-content: center;
 }
 
 footer p a {
