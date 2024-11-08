@@ -15,6 +15,8 @@ if ($conn->connect_error) {
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nama_produk = $_POST['nama_produk'];
     $harga = $_POST['harga'];
+    $deskripsi = $_POST['deskripsi'];
+    $url_tujuan = $_POST['url_tujuan'];
     
     // Handle file upload
     $target_dir = "../uploads/"; // Ubah ke direktori satu level di atas
@@ -32,14 +34,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $image_url = "uploads/" . $unique_filename; // Simpan path relatif
         
         // Insert into database
-        $sql = "INSERT INTO products (nama_produk, harga, image_url) VALUES (?, ?, ?)";
+        $sql = "INSERT INTO products (nama_produk, harga, image_url, deskripsi, url_tujuan) VALUES (?, ?, ?, ?, ?)";
         $stmt = $conn->prepare($sql);
 
         if ($stmt === false) {
             die("Error preparing statement: " . $conn->error);
         }
 
-        $stmt->bind_param("sds", $nama_produk, $harga, $image_url);
+        $stmt->bind_param("sdsss", $nama_produk, $harga, $image_url, $deskripsi, $url_tujuan);
         
         if ($stmt->execute()) {
             $stmt->close();
@@ -91,16 +93,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </div>
                 
                 <div class="mb-3">
+                    <label for="deskripsi" class="form-label">Deskripsi Produk</label>
+                    <textarea class="form-control" id="deskripsi" name="deskripsi" rows="3" required></textarea>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="url_tujuan" class="form-label">URL Tujuan</label>
+                    <input type="url" class="form-control" id="url_tujuan" name="url_tuju an" required>
+                </div>
+                
+                <div class="mb-3">
                     <label for="image" class="form-label">Gambar Produk</label>
                     <input type="file" class="form-control" id="image" name="image" accept="image/*" required>
                 </div>
                 
-                <div class="mb-3">
-                    <button type="submit" class="btn btn-primary">Tambah Produk</button>
-                    <a href="produk.php" class="btn btn-secondary">Kembali</a>
-                </div>
+                <button type="submit" class="btn btn-primary">Tambah Produk</button>
             </form>
         </div>
     </div>
 </body>
 </html>
+
+<?php
+$conn->close();
+?>
