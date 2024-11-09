@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 09 Nov 2024 pada 10.16
+-- Waktu pembuatan: 09 Nov 2024 pada 12.07
 -- Versi server: 10.4.32-MariaDB
 -- Versi PHP: 8.0.30
 
@@ -58,6 +58,13 @@ CREATE TABLE `products` (
   `deskripsi` text DEFAULT NULL,
   `url_tujuan` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data untuk tabel `products`
+--
+
+INSERT INTO `products` (`id`, `harga`, `nama_produk`, `image_url`, `deskripsi`, `url_tujuan`) VALUES
+(15, 10000.00, 'Akun Roblox Brama', 'uploads/672f3e5e19dbf.png', 'Nggak ada yang bisa dijelasin pada produk ini', 'https://youtu.be/QalyjPmwJ4g?si=TNxONYt10d8Xu-O1');
 
 -- --------------------------------------------------------
 
@@ -132,7 +139,7 @@ ALTER TABLE `click_records`
 -- AUTO_INCREMENT untuk tabel `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT untuk tabel `users`
