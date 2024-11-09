@@ -1,5 +1,5 @@
 <?php
-$namaproduk = array('Kategori Produk','Total Pembelian');
+$namaproduk = array('Kategori Produk','Stok Akun');
 $dataproduk = array('FF','PUBG','BLOODSTRIKE','COC','ARKNIGHTS','AOV','MLBB','GENSHIN IMPACT','CODM','AZUR LANE');
 $totalPenghasilan = array(
     array(
