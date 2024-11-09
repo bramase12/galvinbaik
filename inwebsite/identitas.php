@@ -1,7 +1,7 @@
 <?php include "databases/dataadmin.php"?>
 <div class="card-container" style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content:center;padding-top: 5rem; text-align: center;">
   <div class="card" style="width: 18rem; padding: 1rem;">
-      <img src="#" class="card-img-top" alt="#">
+      <img src="assets/NawaPP.jpeg" class="card-img-top" alt="#">
       <div class="card-body">
           <h5 class="card-title"><?php echo $dataadmin[0]["nama"]?></h5>
           <p class="card-text"><?php echo $dataadmin[0]["role"]?></p>

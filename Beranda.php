@@ -12,10 +12,7 @@
     <?php  include_once 'navbar/header.html'; ?>
 </header>
 <body>
-    <?php  include_once 'navbar/navbar.html'; ?>
-    <main>
-        <?php  include_once 'inwebsite/iniberanda.html'; ?>
-    </main>
+    <?php  include_once 'navbar/navbar.html';include_once 'inwebsite/iniberanda.html'; ?>
 </body>
 <footer>
     <?php  include_once 'navbar/footer.html'; ?>

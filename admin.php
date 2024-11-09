@@ -12,8 +12,7 @@
     <?php  include_once 'navbar/header.html'; ?>
 </header>
 <body>
-    <?php  include_once 'navbar/navbar.html'; ?>
-    <?php  include_once 'inwebsite/identitas.php'; ?>
+    <?php  include_once 'navbar/navbar.html';include_once 'inwebsite/identitas.php'; ?>
 </body>
 <footer>
     <?php  include_once 'navbar/footer.html'; ?>
