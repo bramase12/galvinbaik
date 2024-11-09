@@ -57,6 +57,7 @@ footer {
     width: 100%; 
     padding: 10px; 
     justify-content: center;
+    background-size: cover;
 }
 
 footer p a {

@@ -99,7 +99,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 
                 <div class="mb-3">
                     <label for="url_tujuan" class="form-label">URL Tujuan</label>
-                    <input type="url" class="form-control" id="url_tujuan" name="url_tuju an" required>
+                    <input type="url" class="form-control" id="url_tujuan" name="url_tujuan" required>
                 </div>
                 
                 <div class="mb-3">
