@@ -10,7 +10,7 @@ $dataadmin = array(
         "role" => "Web Developer"
     ),
     array(
-        "nama" => "Gregorius Cahya Dewa A.",
+        "nama" => "Gregorius Cahya D. A.",
         "role" => "Graphic Designer"
     ),
     array(

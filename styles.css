@@ -27,8 +27,8 @@ nav {
     padding: 10px; 
     position: fixed;
     top: 0;
-    width: 100%; /* Pastikan nav mengisi lebar halaman */
-    z-index: 1000; /* Agar nav berada di atas konten lainnya */
+    width: 100%; 
+    z-index: 1000; 
 }
 nav ul {
     display: flex;
