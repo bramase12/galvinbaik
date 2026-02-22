@@ -1,15 +1,6 @@
 <?php
 // Koneksi database
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "fufastore";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+include '../server/server.php'; 
 
 // Query untuk mengambil data (diubah dari users menjadi akun)
 $sql = "SELECT 
